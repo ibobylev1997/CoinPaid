@@ -12,7 +12,7 @@ WITH cte AS (
 )
 
 MERGE INTO dds.hist_transactions A
-USING stg.transactions B
+USING cte B
 ON (A.id_tran=B.id_tran)
 WHEN MATCHED THEN 
     UPDATE SET A.last_txn_dt = B.updated_at
