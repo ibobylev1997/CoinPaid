@@ -26,9 +26,13 @@ class MySqlToVerticaOperator(BaseOperator):
 
     def execute(self, context):
         
+        start_date = 
+        
         #Подключение к БД
         source = MySqlHook(self.mysql_conn_id)
         target = VerticaHook(self.vertica_conn_id)
+        
+        self.sql = sql.format()
         
         conn = source.get_conn()
         cursor = conn.cursor()
