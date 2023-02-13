@@ -1,5 +1,5 @@
 SELECT
-     id
+     id as id_tran
     ,currency
     ,timestamp
     ,amount
